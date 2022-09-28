@@ -1,0 +1,101 @@
+<!--
+*User Story #1: As a user I want to put my name on the homepage
+*User Story #2: As a user I want to see the current time on the homepage
+*User Story #3: As a user I want to see a greeting with my inputted name on the homepage
+*User Story #4: As a user I want to add my main focus for today on the homepage and display it also on the same page
+*User Story #5: As a user I want to see a random quote on the homepage
+*User Story #6: As a user I want to add a todo list on the homepage and is able to see the list on the same page
+*User Story #7: As a user I want to add a new quote for my momentum app
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/momentumstyle.css">
+    <title>New Tab</title>
+</head>
+<body onload="initClock()">
+    <div class="full-region">
+        <div class="top-row">
+            <span>blabla</span>
+        </div>
+        <div class="middle-row">
+            <div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hours">00</span>:
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>
+                    <span id="clock-format">AM/PM</span>
+                    <div class="option-button">
+                        <img class="ellipsis-icon" src="./pics/ellipsis.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <div class="bottom-left">
+                <div class="settings">
+                    <span>settings-icon</span>
+                </div>
+                <div class="background">
+                    <span>bg-tab</span>
+                </div>
+            </div>
+            <div class="bottom-mid">
+                <div class="quote">
+                    <span>insert quote medyo mahaba dami ebas</span>
+                </div>
+            </div>
+            <div class="bottom-right">
+                <div class="todo">
+                    <div class="nipple nipple-bottom-right">
+                        <div class="todo-popup">
+                            <div class="todo-upper">
+                                <div class="todo-upper-left">
+                                    <span>To-do List</span>
+                                    <img class="chooser-icon" src="./pics/icondark.png" alt="">
+                                </div>
+                                <div class="todo-upper-right">
+                                    <div class="option-button">
+                                        <img class="ellipsis-icon" src="./pics/ellipsis.png" alt="">
+                                    </div>
+                                    <div class="dropdown todo-option-dropdown">
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-list-item">
+                                                <img class="delete-icon" src="./pics/icondelete.png" alt="">
+                                                <span>Delete All</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="todo-mid">
+                                <ol class="todo-list-content">
+                                    <li class="empty">
+                                        <p class="empty-title">No todos yet</p>
+                                        <button class="new-todo-button" onclick="document.getElementById('new-todo').style.visibility = 'visible'">New Todo</button>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="todo-bottom">
+                                <input id="new-todo" type="text" placeholder="New Todo" style="visibility:hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="todo-button">Todo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/momentumscript.js"></script>
+</body>
+</html>
