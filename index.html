@@ -1,6 +1,6 @@
 <!--
 *User Story #1: As a user I want to put my name on the homepage
-*User Story #2: As a user I want to see the current time on the homepage
+DONE!*User Story #2: As a user I want to see the current time on the homepage
 *User Story #3: As a user I want to see a greeting with my inputted name on the homepage
 *User Story #4: As a user I want to add my main focus for today on the homepage and display it also on the same page
 *User Story #5: As a user I want to see a random quote on the homepage
@@ -15,8 +15,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/momentumstyle.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/background.css">
     <title>New Tab</title>
+=======
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
+    <title>Momentum</title>
+>>>>>>> 16f7098a0577eb8a158dd1c9cb47946cd17af436
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
+    
+    <title>Momentum</title>
+
+
+
+
+
+
+
 </head>
 <body onload="initClock(), autoPlay()">
     
@@ -45,24 +65,70 @@
                     <span id="minutes">00</span>:
                     <span id="seconds">00</span>
                     <span id="clock-format">AM/PM</span>
-                    <div class="option-button">
-                        <img class="ellipsis-icon" src="./pics/ellipsis.png" alt="">
-                    </div>
+                    <button class="icon icon-ellipsis">&#8943;</button>
                 </div>
+                <div id="greeting">
+                    <span id="greet">Good</span>
+                    <span id="username" contenteditable="false">*name*</span>
+                    <button class="icon editname">&#9998;</button>
+                </div>
+    <!-- Settings Pop-up -->
+ <div class = "settings-popup">
+    <div class = "settings-left">
+        <ul class = "settings-firstrow">
+            <li>General</li>
+            <li>To do</li>
+            <li>Mantras</li>
+        </ul>
+    </div>
+    <!-- Settings Pop-up second section -->
+    <div class ="settings-right">    
+    <ul class="settings-firstrow">
+            <li id = "settings-gen">General</li>
+            <li class="setting-custom">Customize your dashboard</li>
+            <li class="setting-custom" id="settings-show">Show</li>
+            <li class = "show-weather">Weather</li>
+            <li class = "show-clock">Clock</li>
+            <li class = "show-greetings">Greetings</li>
+        </ul>
+    </div>
+    <div class="settings-toggle">
+        <ul class="settings-firstrow">
+        <li><label class="switch show-weather">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label></li>
+        <li><label class="switch show-clock">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label></li>
+        <li><label class="switch show-greetings">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label></li>
+    </ul>
+    </div>
+</div>
+<!-- End of Settings Popup -->
+        <div>
+
+            <div class="mainfocus-container">
+                <label for="maintask">What is your main focus for today?</label>
+                <input type="text" id="maintask">
             </div>
+
         </div>
+       
         <div class="bottom-row">
             <div class="bottom-left">
                 <div class="settings">
-                    <span>settings-icon</span>
-                </div>
-                <div class="background">
-                    <span>bg-tab</span>
+                    <span><img class= "settings-img" src="./pics/settings.png"></span>
                 </div>
             </div>
+
             <div class="bottom-mid">
                 <div class="quote">
-                    <span>insert quote medyo mahaba dami ebas</span>
+                    <span id="display-quotes"></span>
                 </div>
             </div>
             <div class="bottom-right">
@@ -88,7 +154,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="todo-mid">
+                          <div class="todo-mid">
                                 <ol class="todo-list-content">
                                     <li class="empty">
                                         <p class="empty-title">No todos yet</p>
@@ -101,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-                    <span class="todo-button">Todo</span>
+                    <span class="todo-button">To do</span>
                 </div>
             </div>
         </div>
