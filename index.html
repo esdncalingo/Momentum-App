@@ -15,14 +15,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/momentumstyle.css">
+    <link rel="stylesheet" href="./css/background.css">
     <title>New Tab</title>
 </head>
-<body onload="initClock()">
+<body onload="initClock(), autoPlay()">
+    
+    
     <div class="full-region">
         <div class="top-row">
             <span>blabla</span>
         </div>
         <div class="middle-row">
+            <!-- --------- Background --------- -->
+            <div class="slide" style="background-image: url(./background/01.png);"></div>
+            <div class="slide" style="background-image: url(./background/02.png);"></div>
+            <div class="slide" style="background-image: url(./background/03.png);"></div>
+            <div class="slide" style="background-image: url(./background/04.png);"></div>
+            <div class="slide" style="background-image: url(./background/05.png);"></div>               
+            <!-- ----------------------------- -->
             <div class="datetime">
                 <div class="date">
                     <span id="dayname">Day</span>,
@@ -97,5 +107,6 @@
         </div>
     </div>
     <script src="./js/momentumscript.js"></script>
+    <script src="./js/background.js"></script>
 </body>
 </html>

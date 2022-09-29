@@ -1,0 +1,12 @@
+.slide{
+    z-index: -1;
+    max-height: max-content;
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
