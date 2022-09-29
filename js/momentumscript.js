@@ -10,17 +10,27 @@ function updateClock() {
   var min = now.getMinutes();
   var sec = now.getSeconds();
   var cf = "PM";
+  const greeting = document.getElementById('greet');
 
-  //12-hour format
+  //12-hour format and greeting
   if (hr <12) {
     cf = "AM";
+    greeting.innerHTML = "Good Morning,"+ ' ';
+  }
+  if (hr >=12 && hr <=17) {
+    greeting.innerHTML = "Good Afternoon,"+ ' ';
+  }
+  if (hr >17) {
+    greeting.innerHTML = 'Good evening,' + ' ';
   }
   if (hr >12) {
     hr = hr - 12;
   }
+  //force AM on 12 midnight
   if (hr == 0) {
     hr = 12;
     cf = "AM";
+    greeting.innerHTML = "Good Morning,"+ ' ';
   }
 
   Number.prototype.pad = function(digits) {
@@ -36,27 +46,40 @@ function updateClock() {
     document.getElementById(ids[i]).firstChild.nodeValue = values[i];
   }
 }
-//update the html body every 1 second
+//update the html body every 100 msecond
 function initClock(){
   updateClock();
-  window.setInterval("updateClock()", 1)
+  window.setInterval("updateClock()", 100)
 }
 
-//ellipsis dropdown
+//greeting with name and mainfocus
+const editName = document.querySelector('.editname');
+const userName = document.getElementById('username');
 
-const openDropdown = document.getElementsByClassName('option-button')[1];
-const dropdown = document.querySelector('.todo-option-dropdown');
+//press edit button
+editName.addEventListener('click', () => {
+  userName.setAttribute('contenteditable', 'true');
+})
 
-openDropdown.addEventListener('click', () => {
-    dropdown.classList.toggle('active');
-  })
-//todo main click
+//press enter effect on username
+userName.addEventListener('keypress', function onEnter(event) {
+  if(event.key === 'Enter') {
+    localStorage.setItem('newname', `${userName.innerHTML}`)
+    userName.setAttribute('contenteditable', 'false');
+    userName.innerHTML = `${localStorage.getItem('newname')}`;
+  }
+})
 
-const todoMain = document.querySelector('.todo-button');
-const todoToggle = document.querySelector('.todo-popup');
-
-todoMain.addEventListener('click', () => {
-    todoToggle.classList.toggle('active');
+//maintain stored username on refresh
+function maintainUserName() {
+  if(userName.innerHTML) {
+    userName.innerHTML = localStorage.getItem('newname');
+  }
+}
+maintainUserName();
+//when leaving the name input
+userName.addEventListener('blur', () => {
+  userName.innerHTML = localStorage.getItem('newname');
 })
 
 //settings main click
@@ -68,9 +91,6 @@ settingsMain.addEventListener('click', () => {
     settingsToggle.classList.toggle('active');
 })
 
-//for checking
-console.log(openDropdown);
-console.log(todoMain);
 
 //QuoteGenerator
 var quotes = 

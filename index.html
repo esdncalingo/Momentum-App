@@ -1,6 +1,6 @@
 <!--
 *User Story #1: As a user I want to put my name on the homepage
-*User Story #2: As a user I want to see the current time on the homepage
+DONE!*User Story #2: As a user I want to see the current time on the homepage
 *User Story #3: As a user I want to see a greeting with my inputted name on the homepage
 *User Story #4: As a user I want to add my main focus for today on the homepage and display it also on the same page
 *User Story #5: As a user I want to see a random quote on the homepage
@@ -38,9 +38,12 @@
                     <span id="minutes">00</span>:
                     <span id="seconds">00</span>
                     <span id="clock-format">AM/PM</span>
-                    <div class="option-button">
-                        <img class="ellipsis-icon" src="./pics/ellipsis.png" alt="">
-                    </div>
+                    <button class="icon icon-ellipsis">&#8943;</button>
+                </div>
+                <div id="greeting">
+                    <span id="greet">Good</span>
+                    <span id="username" contenteditable="false">*name*</span>
+                    <button class="icon editname">&#9998;</button>
                 </div>
     <!-- Settings Pop-up -->
  <div class = "settings-popup">
@@ -80,8 +83,13 @@
     </div>
 </div>
 <!-- End of Settings Popup -->
+        <div>
+
+            <div class="mainfocus-container">
+                <label for="maintask">What is your main focus for today?</label>
+                <input type="text" id="maintask">
             </div>
-            
+
         </div>
        
         <div class="bottom-row">
