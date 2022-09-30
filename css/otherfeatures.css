@@ -6,6 +6,13 @@
     letter-spacing:.5px;
 }
 
+.ellipsis-vertical{
+  width:30px;
+  background-color:white;
+  border-radius:5px;
+  padding: 5px;
+}
+
 
 /* Settings */
 .settings-img{
