@@ -81,3 +81,12 @@ maintainUserName();
 userName.addEventListener('blur', () => {
   userName.innerHTML = localStorage.getItem('newname');
 })
+
+//todo main click
+
+const todoMain = document.querySelector('.todo-button');
+const todoToggle = document.querySelector('.todo-popup');
+
+todoMain.addEventListener('click', () => {
+    todoToggle.classList.toggle('active');
+})

@@ -10,11 +10,12 @@ body {
     height: 100vh;
 }
 .full-region {
-    width: 100%;
+    width:100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+
 }
 
 /*icon lists*/
@@ -56,14 +57,14 @@ body {
 }
 
 .datetime {
-    color: #1f1f1f;
+    color: white;
     height:200px;
     padding:40px;
     border-radius:10px;
 }
 .date {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: 300;
     letter-spacing: 3px;
     text-align: center;
 }
@@ -95,6 +96,7 @@ body {
 }
 .mainfocus-container {
     padding-top: 50px;
+    padding-bottom: 150px;
     font-size: 36px;
     color: #fff;
     display: flex;
@@ -114,40 +116,52 @@ body {
     border-bottom: 2px solid white;
 }
 /* bottom row ONLY*/
-.bottom-row {
-    bottom: 0;
-    width: 95%;
-    margin: 0 auto;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;   
-    align-items: center;
+.container {
+    width:100%;
+    margin:0 auto;
 }
-.bottom-left, .bottom-mid, .bottom-right {
-    display: flex;
-    align-items: flex-end;
-    margin: 10px, auto;
+
+.bottom-row{
+    display:flex;
+    width: 90%;
+    margin:0px auto;
+    justify-content: space-between;
+    align-items:center;
+    gap: 80px;
+    position:relative;
+    top:310px;
     
 }
 .todo-button {
+    opacity:80%;
     padding: 5px 15px;
+    width:100px;
     color:rgba(0, 0, 0, 0.5);
+    font-weight:700;
     letter-spacing:1.5px;
     height:200px;
     border-radius:10px;
+    background-color:white;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-
+    cursor:pointer;
 }
 /*todo main*/
 .todo-popup {
-    padding: 10px 0px 10px 15px;
     display: none;
     flex-direction: column;
     height: auto;
-    width: 320px;
-    background-color: #222;
-    color: white;
+    width: 300px;
+    background-color:white;
+    color:#1f1f1f;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border-radius:10px;
+    padding: 10px 15px 15px 15px;
+    position: absolute;
+    bottom:20px;
+    right:-20px;
+    font-family: roboto;
 }
+
 .todo-popup.active {
     display: flex;
 }
@@ -158,10 +172,16 @@ body {
 .chooser-icon {
     height: 10px;
 }
+
+.ellipsis-icon{
+    width:20px;
+}
 .todo-upper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight:700;
+    color:rgba(31, 31, 31,.8);
 }
 
 /*dropdown details*/
@@ -205,19 +225,21 @@ body {
 .new-todo-button {
     padding: 7px 21px;
     border-radius: 42px;
-    background: rgb(122, 96, 102);
-    color: #fff;
+    background-color: rgba(31, 31, 31,.1);
+    color: #1f1f1f;
     border: none;
+    cursor:pointer;
 }
 /*todo popup bottom*/
 #new-todo {
-    padding-top: 5px;
+    padding:5px;
     border: 3px solid transparent;
     width: 100%;
     overflow: hidden;
-    background: 0 0;
-    color: #fff;
-    outline: none;
+    background-color:rgba(31, 31, 31,.1);
+    border-radius:5px;
+    color:#1f1f1f;
+    outline:none;
 }
 
 
