@@ -48,11 +48,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     position: relative;
     font-family: 'Segoe UI', sans-serif;
-=======
->>>>>>> 16f7098a0577eb8a158dd1c9cb47946cd17af436
 }
 
 .datetime {
