@@ -93,7 +93,6 @@ body {
 }
 .mainfocus-container {
     padding-top: 50px;
-    padding-bottom: 150px;
     font-size: 36px;
     color: #fff;
     display: flex;
@@ -101,7 +100,24 @@ body {
     align-items: center;
     justify-content: center;
 }
-#maintask {
+.newtask {
+    width: 100%;
+    font-size: 36px;
+    display: block;
+    text-align: center;
+    color: white;
+    background: 0;
+    border: 0;
+}
+.newtask-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.active {
+    display: inline-flex;
+}
+.maintask {
     width: 100%;
     font-size: 36px;
     display: block;
@@ -111,6 +127,9 @@ body {
     border: 0;
     outline: none;
     border-bottom: 2px solid white;
+}
+.hidden {
+    display: none;
 }
 /* bottom row ONLY*/
 .container {
