@@ -61,25 +61,68 @@ editName.addEventListener('click', () => {
   userName.setAttribute('contenteditable', 'true');
 })
 
-//press enter effect on username
-userName.addEventListener('keypress', function onEnter(event) {
-  if(event.key === 'Enter') {
-    localStorage.setItem('newname', `${userName.innerHTML}`)
-    userName.setAttribute('contenteditable', 'false');
-    userName.innerHTML = `${localStorage.getItem('newname')}`;
+  //press enter effect on username
+  userName.addEventListener('keypress', function onEnter(event) {
+    if(event.key === 'Enter') {
+      if(userName.innerHTML == 0) {
+        userName.innerHTML = `${localStorage.getItem('newname')}`;
+      }
+      localStorage.setItem('newname', `${userName.innerHTML}`)
+      userName.setAttribute('contenteditable', 'false');
+      userName.innerHTML = `${localStorage.getItem('newname')}`;
+    }
+  })
+  
+  //maintain stored username on refresh
+  function maintainUserName() {
+    if(userName.innerHTML) {
+      userName.innerHTML = localStorage.getItem('newname');
+    }
+    if(localStorage.getItem('newname') == 0) {
+      localStorage.setItem('newname', 'blank');
+      userName.innerHTML = localStorage.getItem('newname');
+    }
   }
-})
-
-//maintain stored username on refresh
-function maintainUserName() {
-  if(userName.innerHTML) {
-    userName.innerHTML = localStorage.getItem('newname');
-  }
-}
-maintainUserName();
+  maintainUserName();
 //when leaving the name input
 userName.addEventListener('blur', () => {
   userName.innerHTML = localStorage.getItem('newname');
+})
+
+//mainfocus
+const mainTaskInput = document.querySelector('.maintask');
+const newTask = document.querySelector('.newtask');
+const newTaskContainer = document.querySelector('.newtask-container');
+
+//mainfocus enter event
+mainTaskInput.addEventListener('keypress', (event) => {
+    if(event.key === 'Enter') {
+      if(mainTaskInput.value) {
+        newTask.innerHTML = mainTaskInput.value;
+        localStorage.setItem('newtask', `${newTask.innerHTML}`);
+        mainTaskInput.classList.add('hidden');
+        newTaskContainer.classList.add('active');
+      }
+    }
+})
+
+//maintain data when refreshed
+function maintainTask() {
+  if(localStorage.getItem('newtask')) {
+    newTask.innerHTML = localStorage.getItem('newtask');
+    mainTaskInput.classList.add('hidden');
+    newTaskContainer.classList.add('active');
+  }
+}
+maintainTask();
+
+//editing task
+const editTask = document.querySelector('.edittask');
+
+editTask.addEventListener('click', () => {
+  mainTaskInput.classList.remove('hidden');
+  newTaskContainer.classList.remove('active');
+  localStorage.removeItem('newtask');
 })
 
 //todo main click
