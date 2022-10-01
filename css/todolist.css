@@ -1,0 +1,46 @@
+.todo-list-content {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: opacity .2s ease;
+}
+
+.todo-item.visible {
+    width: 100%;
+    display: inline-flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.todo-item {
+    position: relative;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1rem;
+    line-height:  1.1875;
+}
+
+.todo-item label {
+    padding-left: 10px;
+    padding-right: 8px;
+    top: 1px;
+}
+
+.completetask {
+    color: lightgrey;
+    text-decoration: line-through;
+  }
+
+.todo-item-title {
+    flex-grow: 1;
+}
+
+.more {
+    visibility: hidden;
+    transition: .2s;
+}
+
+.more.active{
+    visibility: visible;
+}

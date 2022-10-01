@@ -2,7 +2,7 @@ var slides = document.querySelectorAll('.slide');
 let currentSlide = 0, lastSlide = 0;
 
 const autoPlay = () => {
-    if (currentSlide !== 6) {
+    if (currentSlide !== 7) {
         // slides[currentSlide].style.opacity = 1;
         slides[currentSlide].classList.add('active');
         currentSlide += 1;
