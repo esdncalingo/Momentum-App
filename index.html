@@ -68,21 +68,21 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
     <div class = "settings-popup">
         <div class = "settings-left">
             <ul class = "settings-firstrow" id="leftsection">
-                <li>General</li>
-                </li>Mantras</li>
+                <li class="general" onclick="changeGeneral()">General</li>
+                <li class="mantras" onclick="changeMantras()">Mantras</li>
             </ul>
         </div>
         <!-- Settings Pop-up second section -->
-        <div class ="settings-right" id="general">    
-            <ul class="settings-firstrow">
+        <div class ="settings-right">    
+            <ul class="settings-firstrow secondrow">
                 <li id = "settings-gen">General</li>
                 <li class="setting-custom">Customize your dashboard</li>
                 <li class="setting-custom" id="settings-show">Show</li>
-                <li class = "show-weather">Weather</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <li class = "show-clock">Clock</li>
+                <li class = "show-weather">Weather</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class = "show-clock">Clock</li>
                 <li class = "show-greetings">Greetings</li>
             </ul>
         </div>
-        <div class="settings-toggle" id="general">
+        <div class="settings-toggle">
             <ul class="settings-firstrow">
             <li><label class="switch show-weather">
                 <input type="checkbox">
@@ -92,12 +92,12 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                 <input type="checkbox">
                 <span class="slider round"></span>
               </label></li>
-            <li><label class="switch show-greetings">
+            <li class="greetings-checkbox"><label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
               </label></li>
             </ul>
-        </div>
+            </div>
     </div>
 <!-- End of Settings Popup -->
 </div>
@@ -175,6 +175,7 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
     <script src="./js/momentumscript.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/otherfeatures.js"></script>
+
    
 </body>
 </html>

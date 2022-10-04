@@ -69,8 +69,68 @@ function deleteText(){
 };
 
 
+//Switch to General
+
+function changeGeneral(){
+    var general = document.getElementById('settings-gen');
+    var weather = document.querySelector('.show-weather');
+    var clock = document.querySelector('.show-clock');
+    var greetings = document.querySelector('.show-greetings');
+    var checkbox = document.querySelector('.greetings-checkbox');
+    var settingsCustom = document.querySelector('.setting-custom');
+    var settingsShow = document.querySelector('#settings-show');
+    
+
+    general.innerText = "General";
+    weather.innerText = "Weather";
+    clock.innerText = "Clock";
+    settingsCustom.innerHTML = "Customize your dashboard";
+
+    greetings.style.display="block";
+    checkbox.style.display = "block";
+    settingsShow.style.display = "block";
+
+    weather.style.paddingTop = "3px";
+    weather.style.paddingRight = "0px";
+
+   
+
+};
+
+//Switch to Mantras
+
+function changeMantras() {
+    var general = document.getElementById('settings-gen');
+    var weather = document.querySelector('.show-weather');
+    var clock = document.querySelector('.show-clock');
+    var greetings = document.querySelector('.show-greetings');
+    var checkbox = document.querySelector('.greetings-checkbox');
+    var settingsCustom = document.querySelector('.setting-custom');
+    var settingsShow = document.querySelector('#settings-show');
+    var settingsToggle = document.querySelector('.settings-toggle');
+    
+    
+    general.innerText = "Mantras";
+    weather.innerText = "Add";
+    clock.innerText = "Auto Display";
+    settingsCustom.innerHTML = "Add your mantra today!";
 
 
+    greetings.style.display = "none";
+    checkbox.style.display = "none";
+    settingsShow.style.display = "none";
+
+
+    weather.style.paddingTop = "50px";
+    weather.style.paddingRight = "100px";
+    weather.style.marginRight = "53px";
+    
+
+    
+};
+
+
+    
 
 
 
