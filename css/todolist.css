@@ -1,7 +1,7 @@
 .todo-list-content {
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
     transition: opacity .2s ease;
 }
 
@@ -25,6 +25,9 @@
     padding-left: 10px;
     padding-right: 8px;
     top: 1px;
+}
+.todo-item:hover {
+    background-color: lightgray;
 }
 
 .completetask {
@@ -57,7 +60,7 @@
     border-radius: 5px;
     z-index: 10;
     width: 80px;
-    /* right: 0; */
+    right: 0;
 }
 
 .dropdown-todo-edit-delete.active{

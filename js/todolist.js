@@ -86,8 +86,6 @@ window.addEventListener('load', () => {
             completeList[selectedItem].classList.toggle('completetask');
         }
     })
-
-    deleteTodoItem.addEventListener('click', () => {console.log('delete')})
     
 })
 
@@ -98,13 +96,11 @@ function onmousehover() {
         const label =  todoList.querySelector('.more');
         const dropdown = todoList.querySelector('.dropdown-todo-edit-delete');
         const deleteItem = todoList.querySelector('#delete-todo-item');
-        const selectItem = todoList.querySelector('.todo-item');
-        const containerList = todoList.querySelector('.todo-list-content');
 
         todoList.addEventListener('mouseover', () => {label.classList.add('active')});
         todoList.addEventListener('mouseout', () => {label.classList.remove('active')});
         label.addEventListener('click', () => {dropdown.classList.add('active')});
-        deleteItem.addEventListener('click', () => {containerList.removeChild(selectItem)});
+        deleteItem.addEventListener('click', () => {console.log('delete')});
         
     });
 }
