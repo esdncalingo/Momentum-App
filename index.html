@@ -57,12 +57,12 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                         </div>
                 </div>
                 <div class="greeting-wrapper has-3-cols">
-                    <div class="side-col"></div>
+                    <div class="side-col left"></div>
                     <div id="greeting">
                         <span id="greet">Good</span>
                         <span id="username" contenteditable="false">*name*</span>
                     </div><div class="side-col">
-                        <button class="side-col icon editname">&#9998;</button>
+                        <button class="icon editname">&#9998;</button>
                     </div>
                 </div>
             </div>
@@ -70,9 +70,13 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                 <label for="maintask">What is your main focus for today?</label>
                 <input type="text" class="maintask" name="maintask">
                 <div class="newtask-container has-3-cols">
-                    <button class="icon checkbox">&#9744;</button>
+                    <div class="side-col left">
+                        <input type="checkbox" name="" id="hide-task">
+                    </div>
                     <span class="newtask"></span>
-                    <button class="icon edittask">&#9998;</button>
+                    <div class="side-col">
+                        <button class="icon edittask">&#9998;</button>
+                    </div>
                 </div>
             </div>
         </div>

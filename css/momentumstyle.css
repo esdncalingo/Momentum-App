@@ -21,6 +21,7 @@ body {
 /*icon lists*/
 .icon {
     cursor: pointer;
+    transition: 0.25s;
 }
 .icon {
     opacity: 0;
@@ -32,7 +33,7 @@ body {
     font-weight: 600;
     background: 0;
     border: 0;
-    color: #777;
+    color: rgb(190, 190, 190);
     padding: 5px;
 }
 .icon:hover {
@@ -60,6 +61,11 @@ body {
 }
 .side-col {
     flex: 1;
+}
+.left {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
 .datetime {
     color: white;
@@ -108,7 +114,6 @@ body {
     justify-content: center;
 }
 .newtask {
-    width: 100%;
     font-size: 36px;
     display: block;
     text-align: center;
@@ -116,13 +121,45 @@ body {
     background: 0;
     border: 0;
 }
+#hide-task {
+    /*opacity: 0;*/
+    transition: 0.25s;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px ;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hide-task:after {
+    content: '\00A936';
+    color: #fff;   
+    font-size: 25px;
+    display: none;
+}
+#hide-task:checked {
+    background-color: forestgreen;
+}
+#hide-task:checked::after {
+    display: block;
+}
+.complete {
+    opacity: 0.85;
+    text-decoration: line-through;
+}
 .newtask-container {
+    width: 100%;
     display: none;
     align-items: center;
     justify-content: center;
 }
 .active {
-    display: inline-flex;
+    display: flex;
 }
 .maintask {
     width: 100%;

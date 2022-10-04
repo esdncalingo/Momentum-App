@@ -15,13 +15,13 @@ function updateClock() {
   //12-hour format and greeting
   if (hr <12) {
     cf = "AM";
-    greeting.innerHTML = "Good Morning,"+ ' ';
+    greeting.innerHTML = "Good Morning,"+ `&nbsp;`;
   }
   if (hr >=12 && hr <=17) {
-    greeting.innerHTML = "Good Afternoon,"+ ' ';
+    greeting.innerHTML = "Good Afternoon,"+ `&nbsp;`;
   }
   if (hr >17) {
-    greeting.innerHTML = 'Good evening,' + ' ';
+    greeting.innerHTML = 'Good evening,' + `&nbsp;`;
   }
   if (hr >12) {
     hr = hr - 12;
@@ -90,6 +90,7 @@ maintainUserName();
 //when leaving the name input
 userName.addEventListener('blur', () => {
 userName.innerHTML = localStorage.getItem('newname');
+userName.setAttribute('contenteditable', 'false');
 userName.style.borderBottom = 'none';
 })
 
@@ -130,6 +131,16 @@ editTask.addEventListener('click', () => {
   newTaskContainer.classList.remove('active');
 })
 
+//mainfocus checkox
+const hideMainFocus = document.getElementById('hide-task');
+hideMainFocus.addEventListener('change', function(e){
+  if(hideMainFocus.checked) {
+    newTask.classList.add('complete');
+  } else {
+    newTask.classList.remove('complete');
+  }
+})
+
 //mouse-over mouse-out of name, date, and mainfocus options
 const editTime = document.getElementsByClassName('icon-ellipsis')[0];
 const nameMouse = document.querySelector('.greeting-wrapper');
@@ -155,8 +166,12 @@ function timeMouseOut() {
   editTime.style.opacity = '0';
 }
 function mainFocusMouseOver() {
+  hideMainFocus.style.opacity = '1';
   editTask.style.opacity = '1';
 }
 function mainFocusMouseOut() {
+  if(!hideMainFocus.checked) {
+    hideMainFocus.style.opacity = '0';
+  }
   editTask.style.opacity = '0';
 }
