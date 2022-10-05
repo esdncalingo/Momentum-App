@@ -1,0 +1,88 @@
+.todo-list-content {
+    width: 100%;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    transition: opacity .2s ease;
+}
+
+.todo-item.visible {
+    width: 100%;
+    display: inline-flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.todo-item {
+    position: relative;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1rem;
+    line-height:  1.1875;
+    border-radius: 5px;
+}
+
+.todo-item label {
+    padding-left: 10px;
+    padding-right: 8px;
+    top: 1px;
+}
+.todo-item:hover {
+    background-color: lightgray;
+}
+
+.completetask {
+    color: rgb(240, 240, 240);
+    text-decoration: line-through;
+  }
+
+.todo-item-title {
+    flex-grow: 1;
+    border: transparent;
+    background: transparent;
+}
+
+.more {
+    visibility: hidden;
+    /* transition: .2s; */
+}
+
+.more:hover {
+    border: 1px solid rgb(223, 221, 221);
+    border-radius: 25px;
+}
+
+.more.active{
+    visibility: visible;
+}
+
+.dropdown-todo-edit-delete {
+    position: absolute;
+    display: none;
+    background-color: gray;
+    border-radius: 5px;
+    z-index: 10;
+    width: 80px;
+    right: 0;
+}
+
+.dropdown-todo-edit-delete.active{
+    display: block;
+}
+
+.edit-del-label {
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.edit-del:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.todo-mid {
+    position: relative;
+    height: 100%;
+}

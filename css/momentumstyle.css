@@ -15,7 +15,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 /*icon lists*/
@@ -287,6 +286,7 @@ body {
     color: #1f1f1f;
     border: none;
     cursor:pointer;
+    transition: opacity 1s;
 }
 /*todo popup bottom*/
 #new-todo {
