@@ -17,6 +17,7 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
     <link rel="stylesheet" href="./css/otherfeatures.css">
     <link rel="stylesheet" href="./css/momentumstyle.css">
     <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/todolist.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">   
@@ -36,6 +37,7 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
             <div class="slide" style="background-image: url(./background/03.png);"></div>
             <div class="slide" style="background-image: url(./background/04.png);"></div>
             <div class="slide" style="background-image: url(./background/05.png);"></div>
+            <div class="slide" style="background-image: url(./background/06.png);"></div>
             <div class="slide" style="background-image: url(./background/01.png);"></div>
             <!-- ----------------------------- -->
             <div class="datetime">
@@ -67,14 +69,13 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
         <!-- Settings Pop-up -->
 <div class = "settings-popup">
     <div class = "settings-left">
-        <ul class = "settings-firstrow">
+        <ul class = "settings-firstrow" id="leftsection">
             <li>General</li>
-            <li>To do</li>
             <li>Mantras</li>
         </ul>
     </div>
     <!-- Settings Pop-up second section -->
-    <div class ="settings-right">    
+    <div class ="settings-right" id="general">    
     <ul class="settings-firstrow">
             <li id = "settings-gen">General</li>
             <li class="setting-custom">Customize your dashboard</li>
@@ -103,7 +104,19 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
 </div>
 <!-- End of Settings Popup -->
 </div>
-
+<section class = "insertquote-popup">
+    <div class="insertquote-container">
+        <span id="insertquote-txt">Add your own quote below</span>
+        <span><img src="./pics/close.png" class="close-btn"></span>
+        <label for="insertquote"></label>
+        <div><input type="text" id="insertquote"></div>
+     <div class = quote-button>   
+        <button class = "quote-btn btn-one" onclick="newQuote()">Add a Quote</button>
+        <button class = "quote-btn btn-two" onclick="deleteText()">Delete</button>
+        <button class = "quote-btn btn-three" onclick="randomQuote()">Auto Display</button>
+     </div>
+    </div>
+</section>
 <div class ="container">
     <div class="bottom-row">
         <div class="bottom-left">
@@ -115,8 +128,10 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
         <div class="bottom-mid">
             <div class="quote">
                 <span id="display-quotes"></span>
+                <img class="ellipsis-vertical" src = "./pics/ellipsis-vertical.png" id="insertquote-btn">
             </div>
         </div>
+        
         <div class="bottom-right">
             <div class="todo">
                 <div class="nipple nipple-bottom-right">
@@ -141,15 +156,15 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                             </div>
                         </div>
                       <div class="todo-mid">
-                            <ol class="todo-list-content">
+                            <ol class="todo-list-content" data-total="0">
                                 <li class="empty">
                                     <p class="empty-title">No todos yet</p>
-                                    <button class="new-todo-button" onclick="document.getElementById('new-todo').style.visibility = 'visible'">New Todo</button>
+                                    <button class="new-todo-button">New Todo</button>
                                 </li>
                             </ol>
                         </div>
                         <div class="todo-bottom">
-                            <input id="new-todo" type="text" placeholder="New Todo" style="visibility:hidden">
+                            <input id="new-todo" name="content" type="text" placeholder="New Todo" style="visibility:hidden">
                         </div>
                     </div>
                 </div>
@@ -161,5 +176,6 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
     <script src="./js/momentumscript.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/otherfeatures.js"></script>
+    <script src="./js/todolist.js"></script>
 </body>
 </html>
