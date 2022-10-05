@@ -47,23 +47,39 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                     <span id="daynum">00</span>,
                     <span id="year">Year</span>
                 </div>
-                <div class="time">
-                    <span id="hours">00</span>:
-                    <span id="minutes">00</span>:
-                    <span id="seconds">00</span>
-                    <span id="clock-format">AM/PM</span>
-                    <button class="icon icon-ellipsis">&#8943;</button>
+                <div class="time has-3-cols">
+                    <div class="side-col"></div>
+                    <div class="time-wrapper">
+                        <span id="hours">00</span>:
+                        <span id="minutes">00</span>:
+                        <span id="seconds">00</span>
+                        <span id="clock-format">AM/PM</span></div>
+                        <div class="side-col">
+                            <button class="icon icon-ellipsis">&#8943;</button>
+                        </div>
                 </div>
-                <div id="greeting">
-                    <span id="greet">Good</span>
-                    <span id="username" contenteditable="false">*name*</span>
-                    <button class="icon editname">&#9998;</button>
+                <div class="greeting-wrapper has-3-cols">
+                    <div class="side-col left"></div>
+                    <div id="greeting">
+                        <span id="greet">Good</span>
+                        <span id="username" contenteditable="false">*name*</span>
+                    </div><div class="side-col">
+                        <button class="icon editname">&#9998;</button>
+                    </div>
                 </div>
-            <div>   
-
+            </div>
             <div class="mainfocus-container">
                 <label for="maintask">What is your main focus for today?</label>
-                <input type="text" id="maintask">
+                <input type="text" class="maintask" name="maintask">
+                <div class="newtask-container has-3-cols">
+                    <div class="side-col left">
+                        <input type="checkbox" name="" id="hide-task" onClick="save()">
+                    </div>
+                    <span class="newtask"></span>
+                    <div class="side-col">
+                        <button class="icon edittask">&#9998;</button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Settings Pop-up -->
