@@ -19,6 +19,7 @@
     opacity: 0;
     font-size: 1rem;
     line-height:  1.1875;
+    border-radius: 5px;
 }
 
 .todo-item label {
@@ -31,12 +32,14 @@
 }
 
 .completetask {
-    color: lightgrey;
+    color: rgb(240, 240, 240);
     text-decoration: line-through;
   }
 
 .todo-item-title {
     flex-grow: 1;
+    border: transparent;
+    background: transparent;
 }
 
 .more {
@@ -45,7 +48,7 @@
 }
 
 .more:hover {
-    border: 1px solid gray;
+    border: 1px solid rgb(223, 221, 221);
     border-radius: 25px;
 }
 

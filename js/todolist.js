@@ -130,20 +130,11 @@ const DisplayTodos = () => {
                 localStorage.setItem('todos', JSON.stringify(todos));
                 DisplayTodos();
             })
+
+            moreOption.addEventListener('click', e => {dropdownListBox.classList.toggle('active')})
+
+            toDo.addEventListener('mouseover', () => {moreOption.classList.add('active')});
+            toDo.addEventListener('mouseout', () => {moreOption.classList.remove('active')});
         });
     }
-}
-
-function onmousehover() {
-    var todoItem = document.querySelectorAll('.todo-item');    
-
-    todoItem.forEach((todoList) => {
-        const label =  todoList.querySelector('.more');
-        const dropdown = todoList.querySelector('.dropdown-todo-edit-delete');
-        const deleteItem = todoList.querySelector('#delete-todo-item');
-
-        todoList.addEventListener('mouseover', () => {label.classList.add('active')});
-        todoList.addEventListener('mouseout', () => {label.classList.remove('active')});
-        label.addEventListener('click', () => {dropdown.classList.add('active')});
-    });
 }
