@@ -131,10 +131,24 @@ editTask.addEventListener('click', () => {
   newTaskContainer.classList.remove('active');
 })
 
+//checkbox and line-through save and load if checked
+var checkbox = document.getElementById("hide-task");
+function save() {	
+    localStorage.setItem("main-task-checkbox", checkbox.checked);	
+}
+
+var checked = JSON.parse(localStorage.getItem("main-task-checkbox"));
+    checkbox.checked = checked;
+    if(checkbox.checked) {
+      checkbox.style.opacity = '1';
+      newTask.classList.add('complete');
+    } else {
+      newTask.classList.remove('complete');
+    }
+
 //mainfocus checkox
-const hideMainFocus = document.getElementById('hide-task');
-hideMainFocus.addEventListener('change', function(e){
-  if(hideMainFocus.checked) {
+checkbox.addEventListener('change', function(e){
+  if(checkbox.checked) {
     newTask.classList.add('complete');
   } else {
     newTask.classList.remove('complete');
@@ -166,12 +180,12 @@ function timeMouseOut() {
   editTime.style.opacity = '0';
 }
 function mainFocusMouseOver() {
-  hideMainFocus.style.opacity = '1';
+  checkbox.style.opacity = '1';
   editTask.style.opacity = '1';
 }
 function mainFocusMouseOut() {
-  if(!hideMainFocus.checked) {
-    hideMainFocus.style.opacity = '0';
+  if(!checkbox.checked) {
+    checkbox.style.opacity = '0';
   }
   editTask.style.opacity = '0';
 }

@@ -187,9 +187,7 @@ body {
     margin:0px auto;
     justify-content: space-between;
     align-items:center;
-    gap: 80px;
     position:relative;
-    top:310px;
     
 }
 .todo-button {
