@@ -10,11 +10,14 @@ settingsMain.addEventListener('click', () => {
 
 //Add a quote button click
 
+
+
 function insertQuote(){
-const quoteBtn = document.querySelector('.ellipsis-vertical');
-const insertQuote = document.querySelector('.insertquote-popup');
-    insertQuote.classList.toggle("active");
+var insertQuote = document.querySelector('.insertquote-popup');
+    insertQuote.style.display="block";
 }
+
+
 
 //Cancel add a quote button click
 
@@ -23,7 +26,6 @@ const quotePopup = document.querySelector('.insertquote-popup');
 quotePopup.style.display = "none";
 
 }
-
 
 
 //QuoteGenerator
@@ -53,8 +55,8 @@ var quotes =
 function newQuote(){
     const addedQuote = document.getElementById("insertquote").value;
     document.getElementById("display-quotes").innerHTML = `"${addedQuote}"`;
-};
-
+    
+}
 //Delete field text
 
 function deleteText(){
@@ -69,30 +71,34 @@ function deleteText(){
 //Switch to General
 
 function changeGeneral(){
-    var general = document.getElementById('settings-gen');
-    var weather = document.querySelector('.show-weather');
-    var clock = document.querySelector('.show-clock');
-    var greetings = document.querySelector('.show-greetings');
-    var checkbox = document.querySelector('.greetings-checkbox');
-    var settingsCustom = document.querySelector('.setting-custom');
-    var settingsShow = document.querySelector('#settings-show');
+        var general = document.getElementById('settings-gen');
+        var weather = document.querySelector('.show-weather');
+        var clock = document.querySelector('.show-clock');
+        var autodisplay = document.querySelector('.show-autodisplay');
+        var checkbox = document.querySelector('.autodisplay-checkbox');
+        var checkboxTwo = document.querySelector('.clock-checkbox');
+        var checkboxThree = document.querySelector('.weather-checkbox');
+        var settingsCustom = document.querySelector('.setting-custom');
+        var settingsShow = document.querySelector('#settings-show');
+
+        
+        
+        general.innerText = "General";
+        settingsCustom.innerHTML = "Customize your dashboard";
+        settingsShow.style.display = "block";
     
+    
+        weather.style.display = "block";
+        checkboxThree.style.display = "block";
+        clock.style.display = "block";
+        checkboxTwo.style.display = "block";
 
-    general.innerText = "General";
-    weather.innerText = "Weather";
-    clock.innerText = "Clock";
-    settingsCustom.innerHTML = "Customize your dashboard";
+        autodisplay.style.display="none";
+        checkbox.style.display="none";
 
-    greetings.style.display="block";
-    checkbox.style.display = "block";
-    settingsShow.style.display = "block";
-
-    weather.style.paddingTop = "3px";
-    weather.style.paddingRight = "0px";
-
-   
-
-};
+        
+    };
+    
 
 //Switch to Mantras
 
@@ -100,35 +106,53 @@ function changeMantras() {
     var general = document.getElementById('settings-gen');
     var weather = document.querySelector('.show-weather');
     var clock = document.querySelector('.show-clock');
-    var greetings = document.querySelector('.show-greetings');
-    var checkbox = document.querySelector('.greetings-checkbox');
+    var autodisplay = document.querySelector('.show-autodisplay');
+    var checkbox = document.querySelector('.autodisplay-checkbox');
     var checkboxTwo = document.querySelector('.clock-checkbox');
+    var checkboxThree = document.querySelector('.weather-checkbox');
     var settingsCustom = document.querySelector('.setting-custom');
     var settingsShow = document.querySelector('#settings-show');
-    var settingsToggle = document.querySelector('.settings-toggle');
+
     
     
     general.innerText = "Mantras";
-    weather.innerText = "Auto Display";
     settingsCustom.innerHTML = "Add your mantra today!";
 
 
-    greetings.style.display = "none";
-    checkbox.style.display = "none";
+    autodisplay.style.display = "block";
+    checkbox.style.display="block";
+
+    weather.style.display = "none";
+    checkboxThree.style.display = "none";
     clock.style.display = "none";
+    checkboxTwo.style.display = "none";
     settingsShow.style.display = "none";
 
 
-    weather.style.paddingTop = "50px";
-    weather.style.paddingRight = "100px";
-    weather.style.marginRight = "53px";
-    
-
-    
+    autodisplay.style.paddingTop = "50px";
+    autodisplay.style.marginRight = "91px";
 };
 
-
+//Toggle autodisplay
+ 
+function switchOn(){
     
+    if (document.getElementById('autodisplay').checked === false)
+   {document.getElementById("display-quotes").innerHTML = ""};
 
+    if(document.getElementById('autodisplay').checked === true){
+        randomQuote()
+    };
 
+}
 
+//Toggle date
+
+function switchDateTime(){
+    var dateTime = document.querySelector('.datetime');
+
+    if(document.getElementById('showdate').checked === false){
+        dateTime.style.display = "none"};
+    if(document.getElementById('showdate').checked === true){
+        dateTime.style.display = "block"};
+}

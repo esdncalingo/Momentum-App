@@ -166,9 +166,17 @@ transition:.5s ease-in-out;
 #settings-show{
   padding-bottom:35px;
 }
-.show-weather,.show-clock,.show-greetings{
+.show-weather,.show-clock,.show-autodisplay{
   display:block;
 
+}
+
+.show-autodisplay {
+  display:none;
+}
+
+.autodisplay-checkbox {
+  display:none;
 }
 
 /* Settings-switch */
@@ -223,4 +231,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 60%;
+}
+
+.autodisplay-checkbox.active{
+
 }
