@@ -19,7 +19,8 @@
     opacity: 0;
     font-size: 1rem;
     line-height:  1.1875;
-
+    border-radius: 5px;
+}
 .todo-item label {
     padding-left: 10px;
     padding-right: 8px;
