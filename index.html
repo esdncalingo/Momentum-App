@@ -88,7 +88,7 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                 <input type="checkbox">
                 <span class="slider round"></span>
               </label></li>
-            <li><label class="switch show-clock">
+            <li class="clock-checkbox"><label class="switch show-clock">
                 <input type="checkbox">
                 <span class="slider round"></span>
               </label></li>
@@ -98,20 +98,19 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
               </label></li>
             </ul>
             </div>
+
     </div>
 <!-- End of Settings Popup -->
 </div>
 <!-- Popup Add Quote -->
 <section class = "insertquote-popup">
     <div class="insertquote-container">
-        <span id="insertquote-txt">Add your own quote below</span>
-        <span><img src="./pics/close.png" class="close-btn"></span>
         <label for="insertquote"></label>
         <div><input type="text" id="insertquote"></div>
      <div class = quote-button>   
         <button class = "quote-btn btn-one" onclick="newQuote()">Add a Quote</button>
         <button class = "quote-btn btn-two" onclick="deleteText()">Delete</button>
-        <button class = "quote-btn btn-three" onclick="randomQuote()">Auto Display</button>
+        <button class = "quote-btn" id="btn-three" onclick="cancelBtn()">Cancel</button>
      </div>
     </div>
 </section>
@@ -128,7 +127,7 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
         <div class="bottom-mid">
             <div class="quote">
                 <span id="display-quotes"></span>
-                <img class="ellipsis-vertical" src = "./pics/ellipsis-vertical.png" id="insertquote-btn">
+                <img class="ellipsis-vertical" src = "./pics/ellipsis-vertical.png" id="insertquote-btn" onclick="insertQuote()">
             </div>
         </div>
         <div class="bottom-right">
@@ -167,7 +166,7 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                         </div>
                     </div>
                 </div>
-                <span class="todo-button">To do</span>
+                <span class="todo-button">Todo</span>
             </div>
         </div>
     </div>

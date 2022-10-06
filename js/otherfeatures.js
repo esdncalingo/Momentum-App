@@ -10,22 +10,19 @@ settingsMain.addEventListener('click', () => {
 
 //Add a quote button click
 
+function insertQuote(){
 const quoteBtn = document.querySelector('.ellipsis-vertical');
 const insertQuote = document.querySelector('.insertquote-popup');
-
-quoteBtn.addEventListener('click',() => {
     insertQuote.classList.toggle("active");
-})
+}
 
 //Cancel add a quote button click
 
-
-const quoteCancel = document.querySelector('close-btn');
+function cancelBtn(){
 const quotePopup = document.querySelector('.insertquote-popup');
+quotePopup.style.display = "none";
 
-quoteCancel.addEventListener('click',() => {
-    quotePopup.classList.remove('active');
-})
+}
 
 
 
@@ -105,19 +102,20 @@ function changeMantras() {
     var clock = document.querySelector('.show-clock');
     var greetings = document.querySelector('.show-greetings');
     var checkbox = document.querySelector('.greetings-checkbox');
+    var checkboxTwo = document.querySelector('.clock-checkbox');
     var settingsCustom = document.querySelector('.setting-custom');
     var settingsShow = document.querySelector('#settings-show');
     var settingsToggle = document.querySelector('.settings-toggle');
     
     
     general.innerText = "Mantras";
-    weather.innerText = "Add";
-    clock.innerText = "Auto Display";
+    weather.innerText = "Auto Display";
     settingsCustom.innerHTML = "Add your mantra today!";
 
 
     greetings.style.display = "none";
     checkbox.style.display = "none";
+    clock.style.display = "none";
     settingsShow.style.display = "none";
 
 
