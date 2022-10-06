@@ -30,7 +30,7 @@ function updateClock() {
   if (hr == 0) {
     hr = 12;
     cf = "AM";
-    greeting.innerHTML = "Good Morning,"+ ' ';
+    greeting.innerHTML = "Good Morning,"+`&nbsp;`;
   }
 
   Number.prototype.pad = function(digits) {
@@ -51,6 +51,14 @@ function initClock(){
   updateClock();
   window.setInterval("updateClock()", 100)
 }
+//clock 24h-format toggle
+const clockButton = document.querySelector('.icon-ellipsis');
+const clockList = document.querySelector('.clock-menu');
+const clockFormat = document.querySelector('.clock');
+clockButton.addEventListener('click', () => {
+  clockList.classList.toggle('toggle');
+})
+
 
 //greeting with name and mainfocus
 const editName = document.querySelector('.editname');
