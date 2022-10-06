@@ -10,13 +10,10 @@ settingsMain.addEventListener('click', () => {
 
 //Add a quote button click
 
-
-
 function insertQuote(){
 var insertQuote = document.querySelector('.insertquote-popup');
     insertQuote.style.display="block";
 }
-
 
 
 //Cancel add a quote button click
@@ -26,7 +23,6 @@ const quotePopup = document.querySelector('.insertquote-popup');
 quotePopup.style.display = "none";
 
 }
-
 
 //QuoteGenerator
 function randomQuote () {
@@ -55,7 +51,6 @@ var quotes =
 function newQuote(){
     const addedQuote = document.getElementById("insertquote").value;
     document.getElementById("display-quotes").innerHTML = `"${addedQuote}"`;
-    
 }
 //Delete field text
 
@@ -155,4 +150,6 @@ function switchDateTime(){
         dateTime.style.display = "none"};
     if(document.getElementById('showdate').checked === true){
         dateTime.style.display = "block"};
-}
+
+};
+

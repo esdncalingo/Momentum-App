@@ -19,7 +19,6 @@
     opacity: 0;
     font-size: 1rem;
     line-height:  1.1875;
-}
 
 .todo-item label {
     padding-left: 10px;
@@ -27,20 +26,63 @@
     top: 1px;
 }
 
+
+.todo-item:hover {
+    background-color: lightgray;
+}
+
 .completetask {
-    color: lightgrey;
+    color: rgb(240, 240, 240);
     text-decoration: line-through;
   }
 
 .todo-item-title {
     flex-grow: 1;
+    border: transparent;
+    background: transparent;
 }
 
 .more {
     visibility: hidden;
-    transition: .2s;
+    /* transition: .2s; */
+}
+
+.more:hover {
+    border: 1px solid rgb(223, 221, 221);
+    border-radius: 25px;
 }
 
 .more.active{
     visibility: visible;
+}
+
+.dropdown-todo-edit-delete {
+    position: absolute;
+    display: none;
+    background-color: gray;
+    border-radius: 5px;
+    z-index: 10;
+    width: 80px;
+    right: 0;
+}
+
+.dropdown-todo-edit-delete.active{
+    display: block;
+}
+
+.edit-del-label {
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.edit-del:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.todo-mid {
+    position: relative;
+    height: 100%;
 }
