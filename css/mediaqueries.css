@@ -1,0 +1,47 @@
+@media screen and (max-width: 767px) {
+ .datetime {
+    flex-basis: 50%;
+    justify-content: flex-start;
+ }   
+ .middle-row {
+    justify-content: space-around;
+ }
+ .date {
+    font-size: 36px;
+    letter-spacing: 2px;
+ }
+ .time-wrapper {
+    font-size: 48px;
+ }
+ .time span:not(:nth-child(4)) {
+    letter-spacing: 2px;
+ }
+ #greeting {
+    font-size: 36px;
+ }
+ .mainfocus-container, .newtask, .maintask {
+    font-size: 30px;
+ }
+ #username {
+    display: block;
+    max-width: 12em;
+ }
+ }
+
+ @media screen and (max-width: 560px) {
+    #year {
+        display: none;
+     }
+     .mainfocus-container, .newtask, .maintask {
+        font-size: 20px;
+     }
+     #greeting {
+        font-size: 24px;
+     }
+     .date, .time-wrapper , .time span:nth-child(4) {
+        font-size: 24px;
+     }
+     .time span:not(:nth-child(4)) {
+        letter-spacing: normal;
+     }
+ }
