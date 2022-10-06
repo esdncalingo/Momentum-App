@@ -1,7 +1,7 @@
 .todo-list-content {
     width: 100%;
-    /* overflow-x: hidden;
-    overflow-y: auto; */
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: opacity .2s ease;
 }
 
