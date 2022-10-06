@@ -10,24 +10,19 @@ settingsMain.addEventListener('click', () => {
 
 //Add a quote button click
 
-const quoteBtn = document.querySelector('.ellipsis-vertical');
-const insertQuote = document.querySelector('.insertquote-popup');
+function insertQuote(){
+var insertQuote = document.querySelector('.insertquote-popup');
+    insertQuote.style.display="block";
+}
 
-quoteBtn.addEventListener('click',() => {
-    insertQuote.classList.toggle("active");
-})
 
 //Cancel add a quote button click
 
-
-const quoteCancel = document.querySelector('close-btn');
+function cancelBtn(){
 const quotePopup = document.querySelector('.insertquote-popup');
+quotePopup.style.display = "none";
 
-quoteCancel.addEventListener('click',() => {
-    quotePopup.classList.remove('active');
-})
-
-
+}
 
 //QuoteGenerator
 function randomQuote () {
@@ -56,8 +51,7 @@ var quotes =
 function newQuote(){
     const addedQuote = document.getElementById("insertquote").value;
     document.getElementById("display-quotes").innerHTML = `"${addedQuote}"`;
-};
-
+}
 //Delete field text
 
 function deleteText(){
@@ -67,3 +61,95 @@ function deleteText(){
     else {document.getElementById("insertquote").value=" ";
     } 
 };
+
+
+//Switch to General
+
+function changeGeneral(){
+        var general = document.getElementById('settings-gen');
+        var weather = document.querySelector('.show-weather');
+        var clock = document.querySelector('.show-clock');
+        var autodisplay = document.querySelector('.show-autodisplay');
+        var checkbox = document.querySelector('.autodisplay-checkbox');
+        var checkboxTwo = document.querySelector('.clock-checkbox');
+        var checkboxThree = document.querySelector('.weather-checkbox');
+        var settingsCustom = document.querySelector('.setting-custom');
+        var settingsShow = document.querySelector('#settings-show');
+
+        
+        
+        general.innerText = "General";
+        settingsCustom.innerHTML = "Customize your dashboard";
+        settingsShow.style.display = "block";
+    
+    
+        weather.style.display = "block";
+        checkboxThree.style.display = "block";
+        clock.style.display = "block";
+        checkboxTwo.style.display = "block";
+
+        autodisplay.style.display="none";
+        checkbox.style.display="none";
+
+        
+    };
+    
+
+//Switch to Mantras
+
+function changeMantras() {
+    var general = document.getElementById('settings-gen');
+    var weather = document.querySelector('.show-weather');
+    var clock = document.querySelector('.show-clock');
+    var autodisplay = document.querySelector('.show-autodisplay');
+    var checkbox = document.querySelector('.autodisplay-checkbox');
+    var checkboxTwo = document.querySelector('.clock-checkbox');
+    var checkboxThree = document.querySelector('.weather-checkbox');
+    var settingsCustom = document.querySelector('.setting-custom');
+    var settingsShow = document.querySelector('#settings-show');
+
+    
+    
+    general.innerText = "Mantras";
+    settingsCustom.innerHTML = "Add your mantra today!";
+
+
+    autodisplay.style.display = "block";
+    checkbox.style.display="block";
+
+    weather.style.display = "none";
+    checkboxThree.style.display = "none";
+    clock.style.display = "none";
+    checkboxTwo.style.display = "none";
+    settingsShow.style.display = "none";
+
+
+    autodisplay.style.paddingTop = "50px";
+    autodisplay.style.marginRight = "91px";
+};
+
+//Toggle autodisplay
+ 
+function switchOn(){
+    
+    if (document.getElementById('autodisplay').checked === false)
+   {document.getElementById("display-quotes").innerHTML = ""};
+
+    if(document.getElementById('autodisplay').checked === true){
+        randomQuote()
+    };
+
+}
+
+//Toggle date
+
+function switchDateTime(){
+    var dateTime = document.querySelector('.datetime');
+
+    if(document.getElementById('showdate').checked === false){
+        dateTime.style.display = "none"};
+    if(document.getElementById('showdate').checked === true){
+        dateTime.style.display = "block"};
+
+};
+

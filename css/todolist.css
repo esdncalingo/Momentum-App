@@ -1,7 +1,7 @@
 .todo-list-content {
     width: 100%;
-    /* overflow-x: hidden;
-    overflow-y: auto; */
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: opacity .2s ease;
 }
 
@@ -21,12 +21,13 @@
     line-height:  1.1875;
     border-radius: 5px;
 }
-
 .todo-item label {
     padding-left: 10px;
     padding-right: 8px;
     top: 1px;
 }
+
+
 .todo-item:hover {
     background-color: lightgray;
 }
