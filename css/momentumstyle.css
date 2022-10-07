@@ -162,7 +162,7 @@ body {
     justify-content: center;
 }
 #hide-task:after {
-    content: '\00A936';
+    /* content: '\00A936'; */
     color: #fff;   
     font-size: 25px;
     display: none;
@@ -196,6 +196,7 @@ body {
     border: 0;
     outline: none;
     border-bottom: 2px solid white;
+    margin-top:30px;
 }
 .hidden {
     display: none;
@@ -221,7 +222,7 @@ body {
     width:100px;
     color:white;
     font-weight:400;
-    letter-spacing:1.5px;
+    letter-spacing:.5px;
     height:200px;
     border-radius:10px;
     cursor:pointer;
@@ -263,7 +264,8 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight:700;
-    color:rgba(31, 31, 31,.8);
+    color:white;
+    width:100%;
 }
 
 /*dropdown details*/
