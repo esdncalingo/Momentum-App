@@ -124,6 +124,13 @@ const DisplayTodos = () => {
                     localStorage.setItem('todos', JSON.stringify(todos));
                     DisplayTodos();
                 })
+                input.addEventListener('keypress', e => {
+                    if (e.key ==='Enter'){
+                        input.setAttribute('readonly', true);
+                        todo.content = e.target.value;
+                        localStorage.setItem('todos', JSON.stringify(todos));
+                    }
+                })
             })
 
             deleteTodoItem.addEventListener('click', e => {
@@ -137,5 +144,27 @@ const DisplayTodos = () => {
             toDo.addEventListener('mouseover', () => {moreOption.classList.add('active')});
             toDo.addEventListener('mouseout', () => {moreOption.classList.remove('active')});
         });
+    } else {
+        todoContainer.innerHTML = '';
+        document.getElementById('new-todo').style.visibility = 'hidden';
+
+        let emptyList = document.createElement('li');
+        let emptyTitle = document.createElement('p');
+        let newTodoBtn = document.createElement('button');
+
+        emptyList.classList.add('empty');
+        emptyTitle.classList.add('empty-title');
+        emptyTitle.textContent = 'No todos yet';
+        newTodoBtn.classList.add('new-todo-button');
+        newTodoBtn.textContent = 'New Todo';
+
+        newTodoBtn.addEventListener('click', () => {
+            document.getElementById('new-todo').style.visibility = 'visible';
+            newTodoBtn.style.opacity = 0;
+        })
+
+        todoContainer.appendChild(emptyList);
+        emptyList.appendChild(emptyTitle);
+        emptyList.appendChild(newTodoBtn);
     }
 }

@@ -1,7 +1,5 @@
 .todo-list-content {
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     transition: opacity .2s ease;
 }
 
@@ -16,24 +14,23 @@
     position: relative;
     display: none;
     visibility: hidden;
+    align-items: center;
     opacity: 0;
     font-size: 1rem;
     line-height:  1.1875;
     border-radius: 5px;
 }
 .todo-item label {
-    padding-left: 10px;
-    padding-right: 8px;
+    margin: 5px;
     top: 1px;
 }
-
 
 .todo-item:hover {
     background-color: lightgray;
 }
 
 .completetask {
-    color: rgb(240, 240, 240);
+    color: gray;
     text-decoration: line-through;
   }
 
@@ -45,12 +42,10 @@
 
 .more {
     visibility: hidden;
-    /* transition: .2s; */
 }
 
 .more:hover {
     border: 1px solid rgb(223, 221, 221);
-    border-radius: 25px;
 }
 
 .more.active{
@@ -65,6 +60,7 @@
     z-index: 10;
     width: 80px;
     right: 0;
+    top: 25px;
 }
 
 .dropdown-todo-edit-delete.active{
@@ -86,4 +82,16 @@
 .todo-mid {
     position: relative;
     height: 100%;
+}
+
+.todo-mid {
+    margin: 10px;
+}
+
+.todo-bottom {
+    text-align: center;
+}
+
+.todo-upper-left, .todo-upper-right {
+    margin: 10px;
 }
