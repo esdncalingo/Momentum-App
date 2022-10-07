@@ -60,8 +60,8 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
                             <ul class="clock-menu">
                                 <li class="clock-item">
                                     <div class="clock-text">24-hour format</div>
-                                    <label class="switch clock-format">
-                                        <input type="checkbox" id="clock-switch">
+                                    <label class="switch clock-format" for="clock-switch">
+                                        <input type="checkbox" id="clock-switch" data-format="12" onclick="clockSave()">
                                         <div class="slider round"></div>
                                     </label>
                                 </li>
