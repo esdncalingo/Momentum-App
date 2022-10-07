@@ -4,20 +4,16 @@
   color:white;
   font-size:25px;
   letter-spacing:.5px;
+  display: inline-flex;
+  align-items:center;
 }
 
-.ellipsis-vertical{
-  display:inline-block;
-  width:15px;
-  border-radius:5px;
-  align-items: center;
-  position:relative;
-  right: -50px;
-  transition: .2s ease-in;
+.pen{
+  justify-self:flex-end;
+  width:20px;
 }
 
-.ellipsis-vertical:hover{
-display:inline-block;
+.pen:hover{
 cursor:pointer;
 
 }
@@ -27,34 +23,30 @@ cursor:pointer;
   display:none;
   background-color:white;
   border-radius:10px;
-  width:40%;
-  height:160px;
-  position:absolute;
+  height:150px;
+  width:30%;
+  position: absolute;
+  align-self: center;
+
 }
 
 .insertquote-popup.active {
-  display:block;
+display: block;
 }
 
 .insertquote-container{
   color:#1f1f1f;
-  width:100%;
   text-align:center;
   font-size:20px;
+  
 } 
-
-#insertquote-txt{
-  position:relative;
-  left:-80px;
-}
 
 .quote-button{
   display:flex;
   justify-content:space-between;
   width:100%;
-  background-color:rgba(31, 31, 31,.9);
-  margin-top:40px;
-  margin-bottom:20px;
+  background-color:rgba(31, 31, 31,1);
+  margin-top:10px;
   border-bottom-left-radius:10px;
   border-bottom-right-radius:10px;
 }
@@ -72,23 +64,18 @@ cursor:pointer;
   background:none;
   font-size:16px;
   color:white;
-  transition: 1s ease-in;
 }
 
 #insertquote {
   width:95%;
-  position:relative;
-  bottom:-20px;
+  margin:20px auto 0 auto;
   padding: 20px;
-  border-radius:5px;
+  border-radius:10px;
   border:none;
   background-color:rgba(197, 193, 193, 0.1);
   outline:none;
   font-size:17px;
   color:#444;
-  justify-content:space-around;
-  width:80%;
-  margin: 10px auto;
 }
 
 /* Display Quotes */
@@ -112,7 +99,6 @@ cursor:pointer;
 .settings-popup {
   display:none;
   position:absolute;
-  bottom:90px;
   left:3%;
   background-color: white;
   color:#444;
@@ -142,16 +128,12 @@ cursor:pointer;
   transition:.5s ease-in-out;
 }
 
-.settings-toggle {
-  padding-top:100px;
-}
-
 
 /* Settings Show Lists */
 
 
 .settings-left {
-  background-color: rgba(31, 31, 31,.9);
+  background-color: rgba(31, 31, 31,1);
   border-radius:10px;
   color:white;
 }
