@@ -15,10 +15,10 @@ function updateClock() {
   //12-hour format and greeting
   if (hr <12) {
     cf = "AM";
-    greeting.innerHTML = "Good Morning,"+ `&nbsp;`;
+    greeting.innerHTML = "Good morning,"+ `&nbsp;`;
   }
   if (hr >=12 && hr <=17) {
-    greeting.innerHTML = "Good Afternoon,"+ `&nbsp;`;
+    greeting.innerHTML = "Good afternoon,"+ `&nbsp;`;
   }
   if (hr >17) {
     greeting.innerHTML = 'Good evening,' + `&nbsp;`;
