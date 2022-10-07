@@ -144,7 +144,7 @@ function switchOn(){
 //Toggle date
 
 function switchDateTime(){
-    var dateTime = document.querySelector('.datetime');
+    var dateTime = document.querySelector('.date');
 
     if(document.getElementById('showdate').checked === false){
         dateTime.style.display = "none"};
