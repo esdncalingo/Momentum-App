@@ -32,6 +32,11 @@ function updateClock() {
     cf = "AM";
     greeting.innerHTML = "Good Morning,"+`&nbsp;`;
   }
+  var formatValue = clockSwitch.getAttribute("data-format");
+  if(formatValue === "24") {
+    hr=hr+12;
+  }
+
 
   Number.prototype.pad = function(digits) {
     for(var n = this.toString(); n.length<digits; n = 0+n);
@@ -58,7 +63,30 @@ const clockFormat = document.querySelector('.clock');
 clockButton.addEventListener('click', () => {
   clockList.classList.toggle('toggle');
 })
-
+//clock-switch 24hr-format
+var clockSwitch = document.querySelector('#clock-switch');
+var ampm = document.querySelector('#clock-format');
+var hourId = document.querySelector('#hours');
+clockSwitch.addEventListener('click', () => {
+  ampm.classList.toggle('hour-format-on');
+  var formatValue = clockSwitch.getAttribute("data-format");
+  if(formatValue === "12") {
+    clockSwitch.setAttribute("data-format", "24")
+  } else {
+    clockSwitch.setAttribute("data-format", "12");
+  }
+})
+function clockSave() {
+  localStorage.setItem('clock-checkbox', clockSwitch.checked);
+}
+var clockchecked = JSON.parse(localStorage.getItem('clock-checkbox'));
+  clockSwitch.checked = clockchecked;
+  if(clockSwitch.checked) {
+    clockSwitch.setAttribute("data-format", "24");
+    ampm.classList.add('hour-format-on');
+  } else {
+    clockSwitch.setAttribute("data-format", "12");
+  }
 
 //greeting with name and mainfocus
 const editName = document.querySelector('.editname');
