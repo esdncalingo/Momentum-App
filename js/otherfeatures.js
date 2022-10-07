@@ -1,4 +1,7 @@
-
+window.addEventListener('load', () => {
+    document.getElementById('showdate').checked = true;
+    document.getElementById('showclock').checked = true;
+})
 //settings main click
 
 const settingsMain = document.querySelector('.settings-img');
