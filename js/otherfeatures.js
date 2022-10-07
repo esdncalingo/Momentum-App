@@ -143,13 +143,23 @@ function switchOn(){
 
 //Toggle date
 
-function switchDateTime(){
-    var dateTime = document.querySelector('.date');
+function switchDate(){
+    var date = document.querySelector('.date');
 
-    if(document.getElementById('showdate').checked === false){
-        dateTime.style.display = "none"};
     if(document.getElementById('showdate').checked === true){
-        dateTime.style.display = "block"};
+        date.style.display = "block"}
+    else (date.style.display = "none");
 
 };
 
+
+//Toggle time
+
+function switchTime(){
+    var time = document.querySelector('.time');
+
+    if(document.getElementById('showclock').checked === true){
+        time.style.display = "block"}
+    else {time.style.display = "none"};
+
+};
