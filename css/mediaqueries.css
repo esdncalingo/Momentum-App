@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 960px) {
  .datetime {
     flex-basis: 50%;
     justify-content: flex-start;
@@ -28,12 +28,14 @@
  }
  }
 
- @media screen and (max-width: 560px) {
+ @media screen and (max-width: 580px) {
     #year {
         display: none;
      }
      .mainfocus-container, .newtask, .maintask {
         font-size: 20px;
+        text-align: center;
+        width: 100%;
      }
      #greeting {
         font-size: 24px;
@@ -43,5 +45,44 @@
      }
      .time span:not(:nth-child(4)) {
         letter-spacing: normal;
+     }
+     .todo-popup {
+      width: 250px;
+      right: 0px;
+     }
+     .quote{
+      display: flex;
+      align-items: center;
+     }
+     .quote img{
+      width: 10px;
+      height: 10px;
+     }
+     #display-quotes{
+      font-size: 10px;
+      text-align: center;
+     }
+     .settings-img {
+      margin: unset;
+      padding: unset;
+      width: 20px;
+      height: 20px;
+     }
+     .todo-button {
+      padding: unset;
+      font-size: 10px;
+     }
+     .bottom-row {
+      gap: 15px;
+     }
+     .datetime {
+      padding: unset;
+     }
+     .has-3-cols{
+      padding: unset;
+     }
+     #hide-task {
+      width: 20px;
+      height: 20px;
      }
  }

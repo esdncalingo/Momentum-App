@@ -159,7 +159,7 @@ function switchTime(){
     var time = document.querySelector('.time');
 
     if(document.getElementById('showclock').checked === true){
-        time.style.display = "block"}
+        time.style.display = "flex"}
     else {time.style.display = "none"};
 
 };
