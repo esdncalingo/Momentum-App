@@ -17,149 +17,206 @@ DONE!*User Story #2: As a user I want to see the current time on the homepage
     <link rel="stylesheet" href="./css/otherfeatures.css">
     <link rel="stylesheet" href="./css/momentumstyle.css">
     <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/todolist.css">
+    <link rel="stylesheet" href="./css/mediaqueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">   
     <title>Momentum</title>
 </head>
 <body onload="initClock(), autoPlay()">
-    
-    
+        
     <div class="full-region">
-        <div class="top-row">
-            <span>blabla</span>
-        </div>
+        <div class="top-row"></div>
         <div class="middle-row">
             <!-- --------- Background --------- -->
             <div class="slide" style="background-image: url(./background/01.png);"></div>
             <div class="slide" style="background-image: url(./background/02.png);"></div>
             <div class="slide" style="background-image: url(./background/03.png);"></div>
             <div class="slide" style="background-image: url(./background/04.png);"></div>
+            <div class="slide" style="background-image: url(./background/05.png);"></div>               
             <div class="slide" style="background-image: url(./background/05.png);"></div>
+            <div class="slide" style="background-image: url(./background/06.png);"></div>
             <div class="slide" style="background-image: url(./background/01.png);"></div>
             <!-- ----------------------------- -->
             <div class="datetime">
                 <div class="date">
                     <span id="dayname">Day</span>,
                     <span id="month">Month</span>
-                    <span id="daynum">00</span>,
+                    <span id="daynum">00</span>
                     <span id="year">Year</span>
                 </div>
-                <div class="time">
-                    <span id="hours">00</span>:
-                    <span id="minutes">00</span>:
-                    <span id="seconds">00</span>
-                    <span id="clock-format">AM/PM</span>
-                    <button class="icon icon-ellipsis">&#8943;</button>
-                </div>
-                <div id="greeting">
-                    <span id="greet">Good</span>
-                    <span id="username" contenteditable="false">*name*</span>
-                    <button class="icon editname">&#9998;</button>
-                </div>
-            <div>   
-
-            <div class="mainfocus-container">
-                <label for="maintask">What is your main focus for today?</label>
-                <input type="text" id="maintask">
-            </div>
-        </div>
-        <!-- Settings Pop-up -->
-<div class = "settings-popup">
-    <div class = "settings-left">
-        <ul class = "settings-firstrow">
-            <li>General</li>
-            <li>To do</li>
-            <li>Mantras</li>
-        </ul>
-    </div>
-    <!-- Settings Pop-up second section -->
-    <div class ="settings-right">    
-    <ul class="settings-firstrow">
-            <li id = "settings-gen">General</li>
-            <li class="setting-custom">Customize your dashboard</li>
-            <li class="setting-custom" id="settings-show">Show</li>
-            <li class = "show-weather">Weather</li>
-            <li class = "show-clock">Clock</li>
-            <li class = "show-greetings">Greetings</li>
-        </ul>
-    </div>
-    <div class="settings-toggle">
-        <ul class="settings-firstrow">
-        <li><label class="switch show-weather">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label></li>
-        <li><label class="switch show-clock">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label></li>
-        <li><label class="switch show-greetings">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label></li>
-    </ul>
-    </div>
-</div>
-<!-- End of Settings Popup -->
-</div>
-
-<div class ="container">
-    <div class="bottom-row">
-        <div class="bottom-left">
-            <div class="settings">
-                <img class= "settings-img" src="./pics/gear-solid.svg">
-            </div>
-        </div>
-
-        <div class="bottom-mid">
-            <div class="quote">
-                <span id="display-quotes"></span>
-            </div>
-        </div>
-        <div class="bottom-right">
-            <div class="todo">
-                <div class="nipple nipple-bottom-right">
-                    <div class="todo-popup">
-                        <div class="todo-upper">
-                            <div class="todo-upper-left">
-                                <span>To-do list</span>
-                                <img class="chooser-icon" src="./pics/down-arrow.png" alt="">
-                            </div>
-                            <div class="todo-upper-right">
-                                <div class="option-button">
-                                    <img class="ellipsis-icon" src="./pics/dots.png" alt="">
-                                </div>
-                                <div class="dropdown todo-option-dropdown">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item">
-                                            <img class="delete-icon" src="./pics/icondelete.png" alt="">
-                                            <span>Delete All</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                      <div class="todo-mid">
-                            <ol class="todo-list-content">
-                                <li class="empty">
-                                    <p class="empty-title">No todos yet</p>
-                                    <button class="new-todo-button" onclick="document.getElementById('new-todo').style.visibility = 'visible'">New Todo</button>
+                <div class="time has-3-cols">
+                    <div class="side-col"></div>
+                    <div class="time-wrapper">
+                        <span id="hours">00</span>:
+                        <span id="minutes">00</span>:
+                        <span id="seconds">00</span>
+                        <span id="clock-format">AM/PM</span>
+                    </div>
+                    <div class="side-col clock">
+                        <button class="icon icon-ellipsis">&#8943;</button>
+                        <div class="">
+                            <ul class="clock-menu">
+                                <li class="clock-item">
+                                    <div class="clock-text">24-hour format</div>
+                                    <label class="switch clock-format" for="clock-switch">
+                                        <input type="checkbox" id="clock-switch" data-format="12" onclick="clockSave()">
+                                        <div class="slider round"></div>
+                                    </label>
                                 </li>
-                            </ol>
+                            </ul>
                         </div>
-                        <div class="todo-bottom">
-                            <input id="new-todo" type="text" placeholder="New Todo" style="visibility:hidden">
+                    </div>                
+                </div>
+                <div class="greeting-wrapper has-3-cols">
+                    <div class="side-col left"></div>
+                    <div id="greeting">
+                        <span id="greet">Good</span>
+                        <span id="username" contenteditable="false">*name*</span>
+                    </div>
+                    <div class="side-col">
+                        <button class="icon editname">&#9998;</button>
+                    </div>
+                </div>
+                
+                <div class="mainfocus-container">
+                    <label for="maintask">What is your main focus for today?</label>
+                    <input type="text" class="maintask" name="maintask">
+                    <div class="newtask-container has-3-cols">
+                        <div class="side-col left">
+                            <input type="checkbox" name="" id="hide-task" onClick="save()">
+                        </div>
+                        <span class="newtask"></span>
+                        <div class="side-col">
+                            <button class="icon edittask">&#9998;</button>
                         </div>
                     </div>
                 </div>
-                <span class="todo-button">To do</span>
+                
+    
+                <!-- Settings Pop-up -->
+                <div class = "settings-popup">
+         
+         
+         
+                    <div class = "settings-left">
+                        <ul class = "settings-firstrow" id="leftsection">
+                            <li class="general" onclick="changeGeneral()">General</li>
+                            <li class="mantras" onclick="changeMantras()">Mantras</li>
+                        </ul>
+                    </div>
+                    <!-- Settings Pop-up second section -->
+                    <div class ="settings-right">    
+                        <ul class="settings-firstrow secondrow">
+                            <li id = "settings-gen">General</li>
+                            <li class="setting-custom">Customize your dashboard</li>
+                            <li class="setting-custom" id="settings-show">Show</li>
+                            <li class = "show-weather">Date</li>    
+                            <li class = "show-clock">Clock</li>   
+                            <li class = "show-autodisplay">Auto display</li>
+                        </ul>
+                    </div>
+                    <div class="settings-toggle">
+                        <ul class="settings-firstrow">
+                            <!-- General -->
+                            <li class = "weather-checkbox">
+                                <label class="switch show-weather">
+                                    <input type="checkbox" id="showdate" onclick="switchDate()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li class="clock-checkbox">
+                                <label class="switch show-clock">
+                                    <input type="checkbox" id="showclock" onclick="switchTime()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <!-- Mantras -->
+                            <li class="autodisplay-checkbox" >
+                                <label class="switch show-autodisplay">
+                                    <input type="checkbox" id="autodisplay" onclick="switchOn()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>     
+                </div>
+            </div>         
+        </div>
+        <!-- Popup Add Quote -->
+        <section class = "insertquote-popup">
+            <div class="insertquote-container">
+                <label for="insertquote"></label>
+                <div><input type="text" id="insertquote"></div>
+            <div class = quote-button>   
+                <button class = "quote-btn btn-one" onclick="newQuote()">Add a Quote</button>
+                <button class = "quote-btn btn-two" onclick="deleteText()">Delete</button>
+                <button class = "quote-btn" id="btn-three" onclick="cancelBtn()">Cancel</button>
+            </div>
+            </div>
+        </section>
+
+        <div class ="container">
+            <div class="bottom-row">
+                <div class="bottom-left">
+                    <div class="settings">
+                        <img class= "settings-img" src="./pics/gear-solid-white.svg">
+                    </div>
+                </div>
+
+                <div class="bottom-mid">
+                    <div class="quote">
+                        <span id="display-quotes"></span>
+                        <img class="pen" src = "./pics/pen-white.png" id="insertquote-btn" onclick="insertQuote()">
+                    </div>
+                </div>
+                
+                <div class="bottom-right">
+                    <div class="todo">
+                        <div class="nipple nipple-bottom-right">
+                            <div class="todo-popup">
+                                <div class="todo-upper">
+                                    <div class="todo-upper-left">
+                                        <span>Today's list</span>
+                                        <img class="chooser-icon" src="./pics/arrow down white.png" alt="">
+                                    </div>
+                                    <div class="todo-upper-right">
+                                        <div class="option-button">
+                                            <img class="ellipsis-icon" src="./pics/ellipsis white.png" alt="">
+                                        </div>
+                                        <div class="dropdown todo-option-dropdown">
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-list-item">
+                                                    <img class="delete-icon" src="./pics/icondelete.png" alt="">
+                                                    <span>Delete All</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="todo-mid">
+                                    <ol class="todo-list-content" data-total="0">
+                                        <li class="empty">
+                                            <p class="empty-title">No todos yet</p>
+                                            <button class="new-todo-button">New Todo</button>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="todo-bottom">
+                                    <input id="new-todo" name="content" type="text" placeholder="New Todo" style="visibility:hidden">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="todo-button">Todo</span>
+                </div>
             </div>
         </div>
+        <script src="./js/momentumscript.js"></script>
+        <script src="./js/background.js"></script>
+        <script src="./js/otherfeatures.js"></script>
+        <script src="./js/todolist.js"></script>
     </div>
-</div>
-    <script src="./js/momentumscript.js"></script>
-    <script src="./js/background.js"></script>
-    <script src="./js/otherfeatures.js"></script>
 </body>
 </html>
