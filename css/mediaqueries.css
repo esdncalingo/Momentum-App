@@ -29,6 +29,9 @@
  #display-quotes{
    text-align: center;
  }
+ .settings-popup{
+   bottom: -120px;
+  }
  }
 
  @media screen and (max-width: 580px) {
@@ -86,5 +89,41 @@
      #hide-task {
       width: 20px;
       height: 20px;
+     }
+     .clock-menu-container {
+      position: absolute;
+      right: 110px;
+      z-index: 10;
+     }
+     .clock-text {
+      font-size: 10px;
+     }
+     .clock-menu{
+      padding: unset;
+      width: 105px;
+     }
+     .clock-item{
+      text-align: center;
+      padding: 3px;
+     }
+     .insertquote-popup{
+      width: 230px;
+     }
+     .settings-popup{
+      width: 260px;
+      bottom: -120px;
+     }
+     .settings-firstrow li{
+      font-size: 10px;
+     }
+     .settings-toggle {
+      margin-right: 10px;
+     }
+     .autodisplay-checkbox{
+      display: unset;
+     }
+     .settings-right{
+      padding: unset;
+      margin-left: 5px;
      }
  }
