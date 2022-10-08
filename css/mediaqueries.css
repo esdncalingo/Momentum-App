@@ -26,6 +26,9 @@
     display: block;
     max-width: 12em;
  }
+ #display-quotes{
+   text-align: center;
+ }
  }
 
  @media screen and (max-width: 580px) {
@@ -60,7 +63,6 @@
      }
      #display-quotes{
       font-size: 10px;
-      text-align: center;
      }
      .settings-img {
       margin: unset;
