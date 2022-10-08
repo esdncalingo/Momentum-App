@@ -7,6 +7,7 @@ function updateClock() {
   var dnum = now.getDate();
   var yr = now.getFullYear();
   var hr = now.getHours();
+  var hr2 = now.getHours();
   var min = now.getMinutes();
   var sec = now.getSeconds();
   var cf = "PM";
@@ -33,7 +34,7 @@ function updateClock() {
     greeting.innerHTML = "Good Morning,"+`&nbsp;`;
   }
   var formatValue = clockSwitch.getAttribute("data-format");
-  if(formatValue === "24") {
+  if(formatValue === "24" && hr2 > 12) {
     hr=hr+12;
   }
 
